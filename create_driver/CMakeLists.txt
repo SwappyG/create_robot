@@ -53,6 +53,10 @@ target_link_libraries(${PROJECT_NAME}
 
 add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 
+add_executable(create_test src/create_test.cpp)
+target_link_libraries(create_test ${libcreate_LIBRARIES} ${catkin_LIBRARIES})
+add_dependencies(create_test ${catkin_EXPORTED_TARGETS})
+
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

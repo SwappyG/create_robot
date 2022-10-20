@@ -211,7 +211,7 @@ void CreateDriver::powerLEDCallback(const std_msgs::UInt8MultiArrayConstPtr& msg
 
 void CreateDriver::setASCIICallback(const std_msgs::UInt8MultiArrayConstPtr& msg)
 {
-  bool result;
+  bool result = false;
   if (msg->data.size() < 1)
   {
     ROS_ERROR("[CREATE] No ASCII digits provided");
